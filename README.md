@@ -76,10 +76,10 @@ To get started with the code in this repository:
    git clone https://github.com/yourusername/machine-coding-round-questions.git
    cd machine-coding-round-questions
 2. npm install
-3. npm run dev
 
-       Explore the Challenges
-    Navigate to the individual challenge directories within the repository to review the implementations. Each challenge has its own README and instructions for running and testing the code.
+
+       3. npm run dev
+
 
 Contributing
 
