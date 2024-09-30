@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 const Carousel = () => {
   const items = [
-    'https://via.placeholder.com/600x400?text=Slide+1',
-    'https://via.placeholder.com/600x400?text=Slide+2',
-    'https://via.placeholder.com/600x400?text=Slide+3',
+    'https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg',
+    'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+    'https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg',
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -13,6 +13,12 @@ function Todolist() {
       setNewTask("");
     }
   };
+  // function addTask:
+  //   if newTask.trim() is not empty:
+  //       Create newTaskObject with text = newTask, completed = false
+  //       Append newTaskObject to the tasks list
+  //       Set tasks state to the updated list
+  //       Clear newTask by setting it to an empty string
 
   // Toggle task completion
   const toggleTaskCompletion = (index) => {
@@ -22,17 +28,39 @@ function Todolist() {
     setTasks(updatedTasks);
   };
 
+  // function toggleTaskCompletion(index):
+  //   Initialize updatedTasks as an empty list
+  //   For each task in tasks:
+  //       If the current task's index matches the input index:
+  //           Copy the task and toggle its completed status
+  //           Add the modified task to updatedTasks
+  //       Else:
+  //           Add the original task to updatedTasks
+  //   Update the tasks array with updatedTasks
+
   // Remove a task
   const removeTask = (index) => {
     const updatedTasks = tasks.filter((_, i) => i !== index);
     setTasks(updatedTasks);
   };
 
+  // function removeTask(index):
+  //   Initialize updatedTasks as an empty list
+  //   For each task in tasks:
+  //       If the current task's index is not equal to the input index:
+  //           Add the task to updatedTasks
+  //   Update the tasks array with updatedTasks
+
   // Start editing a task
   const startEditing = (index) => {
     setEditingTaskIndex(index);
     setEditedTaskText(tasks[index].text); // Set the text of the task to be edited
   };
+  // function startEditing(index):
+  //   Set editingTaskIndex to index (store the index of the task to be edited)
+  //   Retrieve the task at the given index from tasks
+  //   Set editedTaskText to the text of the task (allow user to modify this text)
+
 
   // Save the edited task
   const saveTask = (index) => {
@@ -42,6 +70,17 @@ function Todolist() {
     setTasks(updatedTasks);
     setEditingTaskIndex(null); // Stop editing
   };
+
+  // function saveTask(index):
+  //   Initialize updatedTasks as an empty list
+  //   For each task in tasks:
+  //       If the current task's index matches the input index:
+  //           Copy the task and replace its text with editedTaskText
+  //           Add the modified task to updatedTasks
+  //       Else:
+  //           Add the original task to updatedTasks
+  //   Update the tasks array with updatedTasks
+  //   Stop editing by setting editingTaskIndex to null
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">

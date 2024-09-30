@@ -33,6 +33,7 @@ const LoginForm = () => {
       setIsSubmitting(true);
       // Handle form submission (e.g., send data to an API)
       console.log('Form submitted:', { email, password });
+      alert("Form is submitted");
       setIsSubmitting(false);
     }
   };

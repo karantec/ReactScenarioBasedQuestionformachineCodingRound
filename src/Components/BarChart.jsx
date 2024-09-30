@@ -32,6 +32,40 @@ const BarChart = () => {
     },
   };
 
+//   1. Import React and necessary chart components from 'react-chartjs-2' and 'chart.js'.
+//    - Import Bar (for bar chart) and required features like scales, title, tooltip, and legend.
+
+// 2. Register chart components with ChartJS.register to use them in the bar chart.
+
+// 3. Define a BarChart component.
+//    - Inside the component:
+   
+// 4. Create a `data` object that includes:
+//    - Labels for x-axis (e.g., months like January to June).
+//    - A dataset array containing:
+//      - A label for the data (e.g., 'Sales 2024').
+//      - Data points for each month (e.g., sales numbers in USD).
+//      - Bar styling options (background color and border color).
+   
+// 5. Create an `options` object to configure chart behavior:
+//    - Make chart responsive.
+//    - Set legend position (e.g., 'top').
+//    - Add a title to the chart.
+
+// 6. Return JSX to render the chart:
+//    - Use a flexbox container that centers the chart on the page.
+//    - Render a white box with shadow and padding to hold the chart.
+//    - Use the Bar component to display the bar chart with `data` and `options`.
+
+// 7. Export the BarChart component so it can be used in other parts of the application.
+
+
+// How the Code Works
+
+//     When the component is rendered, the Bar component receives the data and options.
+//     Chart.js uses the registered components to construct a bar chart based on the provided data.
+//     The chart is displayed inside a responsive, styled layout created using Tailwind CSS.
+//     The chart updates dynamically if any data or configuration is changed.
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-lg p-4 bg-white shadow-lg rounded-lg">

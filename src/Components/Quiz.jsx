@@ -1,5 +1,43 @@
 import { useState } from "react";
 
+
+
+
+
+// 1. Initialize State Variables:
+//     - currentQuestionIndex = 0 (Start at the first question)
+//     - selectedAnswer = null (No answer selected initially)
+//     - score = 0 (Initial score is 0)
+//     - quizFinished = false (Quiz not finished at the beginning)
+
+// 2. Fetch the Current Question:
+//     - Get the question and options from quizData based on currentQuestionIndex.
+
+// 3. Handle Answer Selection:
+//     - When an option is clicked:
+//         - Update selectedAnswer to store the selected option.
+
+// 4. Handle Next Question:
+//     - If the selected answer matches the correct answer for the current question:
+//         - Increment the score by 1.
+//     - Clear the selectedAnswer (reset it to null).
+//     - If currentQuestionIndex is the last question:
+//         - Set quizFinished to true (End the quiz).
+//     - Otherwise:
+//         - Increment currentQuestionIndex to move to the next question.
+
+// 5. Render:
+//     - If quizFinished is true:
+//         - Display the user's final score and a message that the quiz is finished.
+//     - Otherwise:
+//         - Display the current question and the list of answer options as buttons.
+//         - Highlight the selected answer option.
+//         - Show a "Next Question" button that is enabled only when an answer is selected.
+//         - The button text changes to "Finish Quiz" for the last question.
+
+// 6. End of the Quiz:
+//     - Display the user's score out of the total number of questions after the quiz is completed.
+
 const quizData = [
   {
     question: "What is the capital of France?",

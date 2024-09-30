@@ -1,5 +1,36 @@
 import  { useState, useEffect, useRef } from 'react';
 
+
+
+
+// 1. Initialize state:
+//     a. items = Array of 20 items ("Item 1", "Item 2", ..., "Item 20")
+//     b. loading = false (indicates if new items are being loaded)
+
+// 2. Create Intersection Observer:
+//     a. Define observer:
+//         - Target the loader element at the bottom of the page
+//         - If loader is visible in the viewport (isIntersecting is true):
+//             Call loadMoreItems()
+
+//     b. Attach observer to loader element when component mounts
+
+//     c. Clean up observer when component unmounts
+
+// 3. Function: loadMoreItems
+//     a. If loading is true, exit the function (prevent multiple simultaneous loads)
+//     b. Set loading to true (start loading new items)
+//     c. Simulate API call with setTimeout (delay of 1.5 seconds)
+//         - Create new items (10 additional items)
+//         - Add new items to items array
+//     d. Set loading to false (loading is complete)
+
+// 4. Render:
+//     a. Display list of items
+//     b. Display loader element at the bottom
+//         - If loading is true: Show "Loading..."
+//         - If not loading: Show "Scroll down to load more"
+
 const Infinite = () => {
   // Initial Data
   const [items, setItems] = useState(Array.from({ length: 20 }, (_, i) => `Item ${i + 1}`));
@@ -33,7 +64,7 @@ const Infinite = () => {
     setLoading(true);
     // Simulate loading data from an API with a delay
     setTimeout(() => {
-      const newItems = Array.from({ length: 10 }, (_, i) => `Item ${items.length + i + 1}`);
+      const newItems = Array.from({ length: 50 }, (_, i) => `Item ${items.length + i + 1}`);
       setItems((prevItems) => [...prevItems, ...newItems]);
       setLoading(false);
     }, 1500);

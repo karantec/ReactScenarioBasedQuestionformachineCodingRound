@@ -10,6 +10,26 @@ const Pagination = ({ totalItems, itemsPerPage, onPageChange }) => {
       onPageChange(page); // Call the function to update the displayed data
     }
   };
+  // Start by setting the initial current page to 1.
+
+  // Calculate total number of pages based on totalItems and itemsPerPage.
+  
+  // Render a "Previous" button:
+  //     If the current page is greater than 1:
+  //         Enable the button and go to the previous page on click.
+  //     Else, disable the button.
+  
+  // For each page number (from 1 to totalPages):
+  //     Render a button for each page.
+  //     If the button corresponds to the current page:
+  //         Highlight the button to show it’s selected.
+  //     On clicking a button, update the current page to the clicked page number.
+  
+  // Render a "Next" button:
+  //     If the current page is less than totalPages:
+  //         Enable the button and go to the next page on click.
+  //     Else, disable the button.
+  
 
   return (
     <div className="flex justify-center items-center space-x-2 mt-4">

@@ -1,43 +1,44 @@
-// import TodoList from "./Components/TodoList"
-// import StarRating from "./Components/StarRating"
-// import WeatherAppLication from "./Components/WeatherApplication"
+// import WeatherApp from "./Components/WeatherApplication"
 
-// import BarChart from "./Components/BarChart"
+import BarChart from "./Components/BarChart"
+import Carousel from "./Components/Crousel"
 import DragDrop from "./Components/DragDrop"
-// import LinkedList from "./Components/LinkedList"
+import DropDown from "./Components/DropDown"
+import Form from "./Components/Forms"
+import Infinite from "./Components/Infinite"
+import LinkedList from "./Components/LinkedList"
+import Quiz from "./Components/Quiz"
 
-
-// import Infinite from "./Components/Infinite"
-// import Quiz from "./Components/Quiz"
-
-// import Carousel from "./Components/Crousel"
-// import ResponsiveLayout from "./Components/ResponsiveLayout"
-// import DropDown from "./Components/DropDown"
-
-// import Form from "./Components/Forms"
+// import Modal from "./Components/Modal"
 
 // import CountdownTimer from "./Components/Countdowntimer"
-
 // import LoginForm from "./Components/LoginForm"
+
 // import Pagination from "./Components/Pagination"
+// import StarRating from "./Components/StarRating"
 
 const App = () => {
   return (
     <div>
-    <DragDrop/>
-    {/* <LinkedList/> */}
-    {/* <BarChart/> */}
-  {/* <Quiz/> */}
+    {/* <DropDown/> */}
+    {/* <Modal/> */}
+    {/* <LinkedList1/> */}
+    {/* <BarChart/>
+  <Quiz/> */}
     {/* <Infinite/> */}
     {/* <ResponsiveLayout/> */}
     {/* <DropDown/> */}
     {/* <Carousel/> */}
     {/* <Form/> */}
     {/* <Pagination/> */}
-    {/* <LoginForm/> */}
+    {/* <StarRating/> */}
+    <DragDrop/>
+    {/* <CountdownTimer initialMinutes={3} initialSeconds={15} /> */}
+    {/* <Pagination/> */}
+    {/* <LoginForm /> */}
       {/* <StarRating/> */}
-       {/* <TodoList/> */}
-       {/* <WeatherAppLication/> */}
+       {/* <Todolist/> */}
+       {/* <WeatherApp/> */}
     </div>
   )
 }

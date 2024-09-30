@@ -39,6 +39,31 @@ const Note = ({ note, index, moveNote }) => {
   );
 };
 
+// 1. Define the drag item type (NOTE) using the ItemTypes object.
+
+// 2. Create the Note component:
+//    - Initialize drag functionality with `useDrag`:
+//      - Attach the drag behavior to the note.
+//      - Collect the `isDragging` state to apply style changes when dragging.
+//    - Initialize drop functionality with `useDrop`:
+//      - Accept only items of type "NOTE".
+//      - When another note is dragged over, check if the dragged note's index differs from the current note's index.
+//      - If so, invoke `moveNote` to swap positions of the notes.
+//    - Return a styled div representing the note, with drag and drop references.
+
+// 3. Create the DragDrop component:
+//    - Initialize the `notes` state with an array of notes.
+//    - Define the `moveNote` function:
+//      - Remove the dragged note from its current position.
+//      - Insert it at the new target position.
+//      - Update the state to reflect the new order.
+//    - Use `DndProvider` with the `HTML5Backend` to enable drag-and-drop functionality.
+//    - Render a list of Note components, passing down the `note`, `index`, and `moveNote` props.
+
+// 4. Render the main component:
+//    - Each note is displayed as a draggable and droppable element.
+//    - On drag-and-drop, the notes are reordered based on user interactions.
+
 // Main Drag and Drop Notes Component
 const DragDrop = () => {
   const [notes, setNotes] = useState([

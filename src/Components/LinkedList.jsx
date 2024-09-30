@@ -55,7 +55,52 @@ class LinkedList {
   }
 }
 
-const LinkedList = () => {
+
+// 1. Create a Node class to represent individual stations:
+//    - Node contains 'value' for station name and 'next' pointer to the next node.
+
+// 2. Create a LinkedList class to represent the train route:
+//    - Initialize head to null and size to 0.
+//    - Add station:
+//      - Create a new node with the station name.
+//      - If the list is empty (no head), set head to the new node.
+//      - Else, traverse to the end and attach the new node.
+//      - Increment the size of the linked list.
+//    - Remove station:
+//      - If the list is empty, return.
+//      - If the head node is the one to be removed, set head to the next node.
+//      - Else, traverse the list to find the station and remove it.
+//      - Decrement the size of the linked list.
+//    - Convert linked list to array:
+//      - Traverse the list from head to the end, collecting station names in an array.
+
+// 3. Create a React component called LinkedList1:
+//    - Initialize state:
+//      - `linkedList` stores a new LinkedList object.
+//      - `station` stores the input value of the station name.
+//      - `route` stores the current stations in an array (derived from linked list).
+   
+// 4. Define the addStation function:
+//    - If the input field is not empty:
+//      - Add the station to the linked list.
+//      - Update the route state by converting the linked list to an array.
+//      - Clear the input field.
+   
+// 5. Define the removeStation function:
+//    - Remove the selected station from the linked list.
+//    - Update the route state by converting the linked list to an array.
+   
+// 6. Render:
+//    - Display an input field for typing a station name and a button to add a station.
+//    - Display the list of stations:
+//      - For each station, display the station name and a "Remove" button.
+//    - If no stations are in the list, display a message.
+
+// 7. Handle Add and Remove button actions:
+//    - On "Add Station", add the station to the route.
+//    - On "Remove", delete the station from the route.
+
+const LinkedList1 = () => {
   const [linkedList] = useState(new LinkedList());
   const [station, setStation] = useState("");
   const [route, setRoute] = useState([]);
@@ -116,4 +161,4 @@ const LinkedList = () => {
   );
 };
 
-export default LinkedList;
+export default LinkedList1;

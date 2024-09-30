@@ -4,6 +4,24 @@ const StarRating = () => {
   const [rating, setRating] = useState(0); // State to store the rating
   const [hover, setHover] = useState(0); // State to track hover effect
 
+
+
+//   Initialize state:
+//    rating = 0 (default)
+//    hover = 0 (default)
+
+// Render:
+//    Title: "Rate Us!"
+//    Loop through 5 stars
+//       For each star:
+//          Render a button
+//          If index <= hover or rating, highlight star
+//          On star click, set rating to star index
+//          On hover, set hover to star index
+//          On mouse leave, reset hover to rating
+
+//    If rating > 0, display rating message
+
   return (
     <div className="min-h-screen flex flex-col justify-center items-center space-y-4 bg-gray-100">
       <h1 className="text-2xl font-bold mb-4">Rate Us!</h1>

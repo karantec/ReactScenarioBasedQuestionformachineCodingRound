@@ -22,6 +22,26 @@ function WeatherApp() {
       setWeather(null);
     }
   };
+  // Function getWeather:
+  //  If city is empty or contains only spaces:
+  //     Exit the function
+   
+  //  Try:
+  //     Send an HTTP request to the wttr.in API with the city name and format options
+
+  //     If response is successful:
+  //        Extract weather data from the response as a text string
+  //        Split the text string by spaces into variables: description, temperature, windSpeed, humidity, and pressure
+  //        Set the weather state with these values
+  //        Clear any existing error message
+      
+  //     If response fails:
+  //        Throw an error "City not found"
+   
+  //  Catch error:
+  //     Set an error message with the error content
+  //     Reset the weather state to null
+
 
   return (
     <div className="min-h-screen bg-blue-100 flex items-center justify-center p-4">
@@ -55,6 +75,16 @@ function WeatherApp() {
             <p className="mt-2">🌡️ Pressure: {weather.pressure}</p>
           </div>
         )}
+        {/* If weather data is available:
+   Create a container div with top margin (mt-4)
+   
+   Inside the container:
+      Display weather temperature in large, bold text (text-4xl, font-semibold)
+      Display weather description in capitalized text with top margin (mt-2)
+      Display wind speed with a wind icon (💨) and some top margin (mt-2)
+      Display humidity with a water droplet icon (💧) and top margin (mt-2)
+      Display pressure with a thermometer icon (🌡️) and top margin (mt-2) */}
+
       </div>
     </div>
   );
