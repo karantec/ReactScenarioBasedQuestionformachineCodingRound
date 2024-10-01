@@ -60,12 +60,7 @@ const BarChart = () => {
 // 7. Export the BarChart component so it can be used in other parts of the application.
 
 
-// How the Code Works
-
-//     When the component is rendered, the Bar component receives the data and options.
-//     Chart.js uses the registered components to construct a bar chart based on the provided data.
-//     The chart is displayed inside a responsive, styled layout created using Tailwind CSS.
-//     The chart updates dynamically if any data or configuration is changed.
+//  
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="w-full max-w-lg p-4 bg-white shadow-lg rounded-lg">
